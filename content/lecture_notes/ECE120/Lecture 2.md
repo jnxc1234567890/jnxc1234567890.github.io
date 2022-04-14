@@ -71,7 +71,7 @@ The easiest way is [[Sign-Magnitude]]. But our topic today focuses on 2's comple
 The key concept of 2's complement representation is to make use of the same addition component as unsigned representation, which is to say,
 $$
 \begin{align*}
-&{\rm For\ a\ negative\ number\ } -k, {\rm we\ wish\ to\ find\ its\ reprentation\ } P_k.\\
-&{\rm So\ that\ }\forall N \in \mathbb{Z}, \mathrm{we\ have\ }(-k+N)\equiv(P_{k}+N) \ \mod 2^{N}.
+&\text{For a negative number }-k, \text{ we wish to find its reprentation }P_k.\\
+&\text{So that }\forall N \in \mathbb{Z}, \text{we have }(-k+N)\equiv(P_{k}+N) \ \mod 2^{N}.
 \end{align*}
 $$
