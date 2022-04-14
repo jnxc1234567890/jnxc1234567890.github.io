@@ -15,6 +15,7 @@ The wiki includes knowledge from these subjects:
 	1. [Calculus](wikipages/Calculus.md)
 - Electrical Engineering
 - Social Science
+	1. [[wikipages/Economics|Economics]]
 
 
 ## Content Lists
