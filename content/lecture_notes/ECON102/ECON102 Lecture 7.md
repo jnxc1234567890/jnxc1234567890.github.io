@@ -99,7 +99,7 @@ Still, the social surplus increases, tax might be a solution to compensate selle
 
 ### Determinants of a Country’s Comparative Advantage
 1. Natural resources (to a large degree, beyond the countries’ control, unless squandered) 
-2. 2. Stocks of human-made resources (more controllable; depend on the PPC)
+2. Stocks of human-made resources (more controllable; depend on the PPC)
 3. Technology 
 4. Education, work habits, and experience of the labor force 
 5. Relative abundance of labor and physical capital 
