@@ -2,7 +2,7 @@
 title: "Lecture 2"
 ---
 
-## Unsigned [[Lectures/ECE120/Lecture 1#Definition for representation|Representation]]
+## Unsigned [[lecture_notes/ECE120/Lecture 1#Definition for representation|Representation]]
 In order to represent an integer, the computer uses base-2 numbers from mathematics (aka. binary).
 Due to hardware limitations, we cannot create representations that use arbitrary number of bits. Therefore, we use some fixed numbers of bits to represent a certain group of numbers, which introduced leading 0s.
 e.g.
