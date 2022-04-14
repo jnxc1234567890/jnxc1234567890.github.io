@@ -17,7 +17,7 @@ The wiki includes knowledge from these subjects:
 	1. [Computer Architecture](wikipages/Computer%20Architecture.md)
 	2. [Software Engineering](wikipages/Software%20Engineering.md)
 - Mathematics
-	1. 
+	1. [Calculus](wikipages/Calculus.md)
 - Electrical Engineering
 - Social Science
 
