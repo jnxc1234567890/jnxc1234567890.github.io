@@ -107,4 +107,39 @@ Still, the social surplus increases, tax might be a solution to compensate selle
 
 ## Arguments Against Free Trade
 Why did both President Trump and Democratic nominee Hilary Clinton create platforms that challenged free trade during the 2016 Presidential campaign? Several arguments are typically set forth:
+
 ### 1. National security concerns
+Allowing resources to flow freely has the effect of allocating resources in and across industries efficiently. But that may mean the creation of **“banana republics”**— nations that specialize in the production of one good.
+
+Though this might be efficient economically, it may not be optimal in a defense-oriented world, where national security is an important consideration.
+
+### 2. Fear of Globalization on a Nation’s Culture
+As the world becomes increasingly interdependent, it also becomes increasingly homogeneous, some people fear the loss of their cultural identity through such globalization. 
+- Decades ago China had no McDonald’s; now in large cities there is one on every corner 
+- Starbucks now serves coffee in more than sixty countries
+
+Such preferences are an important consideration for leaders around the world.
+
+### 3. Environmental and Resource Concerns
+Countries with lax environmental policies allow for relatively more pollution from firms than do countries with strong environmental policies. 
+
+Opponents of free trade often cite these policy differences as creating “pollution havens” in poor countries.
+
+These countries, in an effort to promote economic growth and jobs, use lax pollution regulations to attract industry.
+
+### 4. Infant Industry Arguments
+Opponents of free trade also cite the ”infant industries” argument, in which governments protect their fledgling domestic industries against more advanced competitors.
+
+### Tariffs
+**Tariff** is the tax on goods produced abroad and sold domestically. It's one type of protectionism.
+
+![[lecture_notes/ECON102/images/Pasted image 20220414210737.png]]
+
+If a 15 tariff is imposed on shoes, the local market price rises from 25 to 40.
+
+1. The imposition of the tariff reduces consumer surplus to the area B, F, and H.
+2. The producer surplus is areas A + E.
+3. The government receives the number of import goods times the tariff price in revenue. This revenue equals 15 * 1 million = 15 million, or the area of rectangle I.
+4. What about areas G and J? This is the deadweight loss of the tariff.
+
+Tariff reduces social surplus but protects local industries, most economists in general do not favor such protectionism—it raises prices for consumers and lowers social surplus.
