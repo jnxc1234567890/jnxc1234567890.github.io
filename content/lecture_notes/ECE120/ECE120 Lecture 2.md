@@ -1,8 +1,8 @@
 ---
-title: "Lecture 2"
+title: "ECE120 Lecture 2"
 ---
 
-## Unsigned [[lecture_notes/ECE120/Lecture 1#Definition for representation|Representation]]
+## Unsigned [[lecture_notes/ECE120/ECE120 Lecture 1#Definition for representation|Representation]]
 In order to represent an integer, the computer uses base-2 numbers from mathematics (aka. binary).
 Due to hardware limitations, we cannot create representations that use arbitrary number of bits. Therefore, we use some fixed numbers of bits to represent a certain group of numbers, which introduced leading 0s.
 e.g.
@@ -57,7 +57,7 @@ _{1\ 1} \quad \quad  &\\
 ①10111&
 \end{align}
 $$
-Note there is a carry out 1. Because of bit limitation, it did not appear in the final result, causing a mismatch. This kind of phenomena is called overflow. ^19d695
+Note there is a carry out 1. Because of bit limitation, it did not appear in the final result, causing a mismatch. This kind of phenomena is called overflow.
 
 To sum up, the addition result of $N$ bit binary is
 $$
