@@ -18,6 +18,7 @@ e.g. Convert $01001_2$
 $$
 01001_2 = (0 \cdot 2^4 + 1 \cdot 2^3+0 \cdot 2^2+0 \cdot 2^1+1 \cdot 2^0)_{10}=9_{10}
 $$
+
 ### Conversion from Decimal to Binary
 It might not seem so straightforward as the previous one, but the core idea is the same.
 e.g. Convert $9_{10}$ to a 5-bit binary.
