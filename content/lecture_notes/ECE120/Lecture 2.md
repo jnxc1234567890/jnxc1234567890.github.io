@@ -38,7 +38,7 @@ Binary addition is almost the same as decimal addition.
 e.g. $01001_2+01110_2$
 $$
 \begin{align}
-_1\ \ \ \ \ \ \ \  &\\
+_1\quad \quad  &\\
 01001&\\
 +01110&\\
 \hline
@@ -49,7 +49,7 @@ However, sometimes things go wrong.
 e.g. $01001_2+11110_2$
 $$
 \begin{align}
-_{1\ 1} \ \ \ \ \ \ \ \  &\\
+_{1\ 1} \quad \quad  &\\
 01001&\\
 +11110&\\
 \hline
