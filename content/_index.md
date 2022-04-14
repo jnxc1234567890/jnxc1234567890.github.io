@@ -2,11 +2,24 @@
 title: "Niceme's Wiki"
 ---
 
+## About the Wiki
 
-## Get Started
-> 📚 [Setup your own digital garden using Quartz](notes/setup.md)
+### What the vault is?
+It's my personal wikipedia, recording almost everything I love.
 
-Not convinced yet? Look at some [community digital gardens](notes/showcase.md) built with Quartz, or read about [why I made Quartz](notes/philosophy.md) to begin with.
+### What the vault is for?
+I wish to record the massive amount of information in this age, so I created this wiki, it's sort of like my personal library.
+
+
+## MOC of the Wiki
+The wiki includes knowledge from these subjects:
+- Computer Science
+	1. [Computer Architecture](wikipages/Computer%20Architecture.md)
+	2. [Software Engineering](wikipages/Software%20Engineering.md)
+- Mathematics
+	1. 
+- Electrical Engineering
+- Social Science
 
 ## Content Lists
 If you prefer browsing the contents of this site through a list instead of a graph, you can find content lists here too:
