@@ -37,3 +37,74 @@ Yes, and we can easily observe this fact by drawing the PPC of you and Olivia to
 The new PPC shows that, the total amount of production is maximized at point $T$, which is exactly the point where complete specialization happens.
 
 ### Absolute Advantage
+However, things won't be so ideal all the time. Look at the example below:
+![[lecture_notes/ECON102/images/Pasted image 20220414195209.png]]
+
+**Absolute advantage** is the ability of an individual, firm, or country to produce more of a certain good than other competing producers, given
+the same amount of resources.
+
+If we measure the absolute advantage here, we'll find that you're more productive than Olivia in all the products. The new opportunity cost is:
+
+
+| Individual | Website opportunity cost | Computer program opportunity cost |
+| ---------- | ------------------------ | --------------------------------- |
+| You        | 2/3 computer programs    | 3/2 websites                      |
+| Olivia     | 1/2 computer programs    | 2 websites                        | 
+
+You can still trade though, because you have comparative advantage in computer programs. But  you'll find that you did not gain in the trade: for each computer program you sold, you only get 1 website, which is even less than what you get when you produce the website yourself.
+
+### Price of Trade
+But this doesn't mean that trade can't happen. We have overlooked something important here, **terms of trade**, which is the negotiated exchange rate of goods for goods.
+
+Still the example above, if we say that 1 computer program can exchange more than 1.5 websites, it will be acceptable for you; if 1 website can exchange more than 0.5 computer programs, it will be acceptable for Olivia. This implies that when $\text{computer program}:\text{website}\in (3/2,2)$, the trade will be beneficial for both of you. If the ratio is closer to 2, it will be more beneficial to you, vice versa.
+
+Another interesting observation is that the gains to trade shrink as the trading partners become more alike.
+
+## Trade between countries
+Manufactured goods have played an important role in the balance of imports and exports, causing the increadible free trade worldwide.
+
+But there're still some voices against WTO and free trade, what's the cause?
+
+Let's firstly consider a market without export/import.
+![[lecture_notes/ECON102/images/Pasted image 20220414203539.png]]
+
+### Exporting Nations
+When $P_{\text{world}}>P_{\text{domestic}}$, the country is an exporting nation.
+![[lecture_notes/ECON102/images/Pasted image 20220414203558.png]]
+
+Clearly, suppliers in exporting nations won't remain it's domestic price, the price will rapidly rise to world price, causing the shrink of domestic demand.
+
+Clearly, the sellers has an increased producer surplus of $B+C$, making them better off. However, consumers surplus shrink by $B$, making them worse off.
+
+1. Sellers win.
+2. Buyers lose.
+
+But if we look at the social surplus, it definitely grows. The government could use tax to transfer revenues from sellers to buyers to make the entire society better.
+
+### Importing Nations
+Let's have a look at importing nations.
+![[lecture_notes/ECON102/images/Pasted image 20220414204758.png]]
+
+Clearly, using the same analysis, we'll draw the conclusion:
+1. Sellers lose 
+2. Buyers win
+
+Still, the social surplus increases, tax might be a solution to compensate sellers.
+
+### Other Benefits of World Trade
+1. Consumers: increased variety of goods 
+2. Producers: lower costs - economies of scale 
+3. Increased competition: reduce market power of domestic firms (increase total welfare)
+4. Enhanced flow of ideas, facilitates the spread of technological advances around the world
+
+### Determinants of a Country’s Comparative Advantage
+1. Natural resources (to a large degree, beyond the countries’ control, unless squandered) 
+2. 2. Stocks of human-made resources (more controllable; depend on the PPC)
+3. Technology 
+4. Education, work habits, and experience of the labor force 
+5. Relative abundance of labor and physical capital 
+6. Climate
+
+## Arguments Against Free Trade
+Why did both President Trump and Democratic nominee Hilary Clinton create platforms that challenged free trade during the 2016 Presidential campaign? Several arguments are typically set forth:
+### 1. National security concerns
