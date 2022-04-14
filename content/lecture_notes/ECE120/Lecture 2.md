@@ -23,12 +23,12 @@ It might not seem so straightforward as the previous one, but the core idea is t
 e.g. Convert $9_{10}$ to a 5-bit binary.
 $$
 \begin{align}
-&{\rm Assume}\ 9_{10} = a_4\cdot 2^4 + a_3\cdot 2^3 + a_2\cdot 2^2+a_1\cdot 2^1+a_0\cdot2^0. \\
-&{\rm Clearly,\ the\ parity\ of\ the\ number\ determined}\ a_0. \\
+&\text{Assume } 9_{10} = a_4\cdot 2^4 + a_3\cdot 2^3 + a_2\cdot 2^2+a_1\cdot 2^1+a_0\cdot2^0. \\
+&\text{Clearly, the parity of the number determined }a_0. \\
 &(9-a_0) \div 2 = a_4\cdot 2^3 + a_3\cdot 2^2 + a_2\cdot 2^1+a_1\cdot 2^0 \\
-&{\rm Clearly,\ the\ parity\ of\ the\ number\ determined}\ a_1. \\
+&\text{Clearly, the parity of the number determined } a_1. \\
 &((9-a_0)-a_1) \div 2=a_4\cdot 2^2 + a_3\cdot 2^1 + a_2\cdot 2^0 \\
-&{\rm Clearly,\ the\ parity\ of\ the\ number\ determined}\ a_2. \\
+&\text{ Clearly, the parity of the number determined } a_2. \\
 &\cdots
 \end{align}
 $$
