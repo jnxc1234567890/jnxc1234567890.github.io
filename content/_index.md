@@ -4,12 +4,7 @@ title: "Niceme's Wiki"
 
 ## About the Wiki
 
-### What the vault is?
-It's my personal wikipedia, recording almost everything I love.
-
-### What the vault is for?
-I wish to record the massive amount of information in this age, so I created this wiki, it's sort of like my personal library.
-
+Welcome to my personal wikipedia!
 
 ## MOC of the Wiki
 The wiki includes knowledge from these subjects:
