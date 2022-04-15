@@ -42,18 +42,30 @@ In the market of gasoline, there is additional cost to the society, or externali
 If taken the factors of externalities into account, the cost of society should also be considered, shifting the cost curve (supply curve) upward.
 ![[lecture_notes/ECON102/images/Pasted image 20220415132333.png]]
 
-Therefore, we'll find that 
+Therefore, we'll find that
 $$
 Q_{\text{private}}>Q_{\text{social}}
 $$
 ![[lecture_notes/ECON102/images/Pasted image 20220415132423.png]]
 
 #### Internalizing the Externality
-One fundamental theme unites the multiple solutions to externalities, is try to let economic agents **internalizing** the externality.
-
-When individuals or companies take into account the full costs and benefits of their actions because of some public or private incentive, economists say that they are internalizing the externality.
+One fundamental theme unites the multiple solutions to externalities, is try to let economic agents **internalizing** the externality, meaning individuals or companies take into account the full costs and benefits of their actions because of some public or private incentive.
 
 When the external effects of their actions are internalized, the general result is that the market equilibrium moves toward higher social well-being.
+
+#### Pigou Taxes
+Suppose we impose a 1 per gallon tax on gasoline. The 1/gallon tax on sellers makes sellers’ costs equal to social costs. When market participants must pay social costs, the market equilibrium matches the social optimum.
+
+Such taxes are called **Pigou taxes**.
+
+#### Analysis of Positive Externality
+Similarly, we can find the effect of positive externality on the market.
+![[lecture_notes/ECON102/images/Pasted image 20220415134321.png]]
+
+We'll find that
+$$
+Q_{\text{private}}<Q_{\text{social}}
+$$
 
 ## Private Solution to Externalities
 
