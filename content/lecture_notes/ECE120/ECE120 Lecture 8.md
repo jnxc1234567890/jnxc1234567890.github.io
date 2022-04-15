@@ -13,6 +13,8 @@ There're two kinds, named after the charge carrier.
 
 ![[lecture_notes/ECE120/images/Pasted image 20220415113217.png|300]]
 
+<img src="images/Pasted image 20220415113217.png" />
+
 An n-type MOSFET turns on if the Gate voltage exceeds threshold while the p-type do the opposite.
 
 We only need two kinds of voltages to represent binary:
