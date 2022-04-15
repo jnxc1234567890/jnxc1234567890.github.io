@@ -76,6 +76,9 @@ $$
 &\text{So that }\forall N \in \mathbb{Z}, \text{we have }(-k+N)\equiv(P_{k}+N) \mod 2^{N}.
 \end{align*}
 $$
-It's easy to find that the appropriate $P_{k}$ should be $$
+It's easy to find that the appropriate $P_{k}$ should be $2^{N}-k$.
+
+The representation of $P_{k}=2^{N}-k$ is called **2' complement** representation. It has the advantage of using the same addition circuit with unsigned representation.
 
 ## Sign-Magnitude (optional)
+Sign-Magnitude representation is used 
