@@ -15,6 +15,7 @@ $$
 ### Conversion from Binary to Decimal
 The conversion from binary to decimal is quite straight forward, because the $i$th bit in binary represents $2^{i-1}$ .
 e.g. Convert $01001_2$
+
 $$
 01001_2 = (0 \cdot 2^4 + 1 \cdot 2^3+0 \cdot 2^2+0 \cdot 2^1+1 \cdot 2^0)_{10}=9_{10}
 $$
