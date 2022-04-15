@@ -83,6 +83,7 @@ The small triangle is a **tri-state buffer**.
 | 0   | x   | Z\*  | 
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
+
 \* Z means high impedance, input doesn't affect output.
 
 Tri-state buffer is not a CMOS gate! Look at the design:
