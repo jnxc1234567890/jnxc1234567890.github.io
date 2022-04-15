@@ -1,9 +1,209 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content><title>ECE120 Lecture 7</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://jnxc1234567890.github.io/nicemewiki//icon.png><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet><link href=https://jnxc1234567890.github.io/nicemewiki/styles.cd61336c89ed6e03702366ce4a492b75.min.css rel=stylesheet><script src=https://jnxc1234567890.github.io/nicemewiki/js/darkmode.46b07878b7f5d9e26ad7a3c40f8a0605.min.js></script>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=description content="Program Analysis Being able to read code is a necessary skill. In the real world, codes are often poorly commented (few people are interested in commenting their codes)."><title>ECE120 Lecture 7</title><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=https://jnxc1234567890.github.io/nicemewiki//icon.png><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Sans+Pro:wght@400;600;700&family=Fira+Code:wght@400;700&display=swap" rel=stylesheet><link href=https://jnxc1234567890.github.io/nicemewiki/styles.cd61336c89ed6e03702366ce4a492b75.min.css rel=stylesheet><script src=https://jnxc1234567890.github.io/nicemewiki/js/darkmode.46b07878b7f5d9e26ad7a3c40f8a0605.min.js></script>
 <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
 <script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous></script>
-<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})})</script><script>const BASE_URL="https://jnxc1234567890.github.io/nicemewiki/",fetchData=Promise.all([fetch("https://jnxc1234567890.github.io/nicemewiki/indices/linkIndex.c7c7394279206bc916d6a4b8be316313.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://jnxc1234567890.github.io/nicemewiki/indices/contentIndex.54d5bf18101fa9678a09f3a4a308ecfe.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n}))</script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}],throwOnError:!1})})</script><script>const BASE_URL="https://jnxc1234567890.github.io/nicemewiki/",fetchData=Promise.all([fetch("https://jnxc1234567890.github.io/nicemewiki/indices/linkIndex.a6368acd1da097eb1736d306a93f2f0f.min.json").then(e=>e.json()).then(e=>({index:e.index,links:e.links})),fetch("https://jnxc1234567890.github.io/nicemewiki/indices/contentIndex.989703fe477f6631a4f987bed3eee458.min.json").then(e=>e.json())]).then(([{index:e,links:t},n])=>({index:e,links:t,content:n}))</script></head><script async src="https://www.googletagmanager.com/gtag/js?id=G-XYFD95KB4J"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-XYFD95KB4J",{anonymize_ip:!1})}</script><body><div id=search-container><div id=search-space><input autocomplete=off id=search-bar name=search type=text aria-label=Search placeholder="Search for something..."><div id=results-container></div></div></div><script src=https://cdn.jsdelivr.net/npm/flexsearch@0.7.21/dist/flexsearch.bundle.js integrity="sha256-i3A0NZGkhsKjVMzFxv3ksk0DZh3aXqu0l49Bbh0MdjE=" crossorigin=anonymous defer></script>
 <script defer src=https://jnxc1234567890.github.io/nicemewiki/js/search.bc849b857f2c1b822264d40635bb67b6.min.js></script><div class=singlePage><header><h1 id=page-title><a href=https://jnxc1234567890.github.io/nicemewiki/>Niceme's Wiki</a></h1><svg tabindex="0" id="search-icon" aria-labelledby="title desc" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title id="title">Search Icon</title><desc id="desc">Icon to open search</desc><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"/><circle cx="8" cy="8" r="7"/></g></svg><div class=spacer></div><div class=darkmode><input class=toggle id=darkmode-toggle type=checkbox tabindex=-1>
-<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>ECE120 Lecture 7</h1><p class=meta>Last updated April 15, 2022</p><ul class=tags></ul></article><hr><div class=page-end><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/nicemewiki/lecture_notes/ECE120/ECE120-MOC>ECE120 MOC</a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://jnxc1234567890.github.io/nicemewiki/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
+<label id=toggle-label-light for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="dayIcon" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35"><title>Light Mode</title><path d="M6 17.5C6 16.672 5.328 16 4.5 16h-3C.672 16 0 16.672.0 17.5S.672 19 1.5 19h3C5.328 19 6 18.328 6 17.5zM7.5 26c-.414.0-.789.168-1.061.439l-2 2C4.168 28.711 4 29.086 4 29.5 4 30.328 4.671 31 5.5 31c.414.0.789-.168 1.06-.44l2-2C8.832 28.289 9 27.914 9 27.5 9 26.672 8.329 26 7.5 26zm10-20C18.329 6 19 5.328 19 4.5v-3C19 .672 18.329.0 17.5.0S16 .672 16 1.5v3C16 5.328 16.671 6 17.5 6zm10 3c.414.0.789-.168 1.06-.439l2-2C30.832 6.289 31 5.914 31 5.5 31 4.672 30.329 4 29.5 4c-.414.0-.789.168-1.061.44l-2 2C26.168 6.711 26 7.086 26 7.5 26 8.328 26.671 9 27.5 9zM6.439 8.561C6.711 8.832 7.086 9 7.5 9 8.328 9 9 8.328 9 7.5c0-.414-.168-.789-.439-1.061l-2-2C6.289 4.168 5.914 4 5.5 4 4.672 4 4 4.672 4 5.5c0 .414.168.789.439 1.06l2 2.001zM33.5 16h-3c-.828.0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5h3c.828.0 1.5-.672 1.5-1.5S34.328 16 33.5 16zM28.561 26.439C28.289 26.168 27.914 26 27.5 26c-.828.0-1.5.672-1.5 1.5.0.414.168.789.439 1.06l2 2C28.711 30.832 29.086 31 29.5 31c.828.0 1.5-.672 1.5-1.5.0-.414-.168-.789-.439-1.061l-2-2zM17.5 29c-.829.0-1.5.672-1.5 1.5v3c0 .828.671 1.5 1.5 1.5s1.5-.672 1.5-1.5v-3C19 29.672 18.329 29 17.5 29zm0-22C11.71 7 7 11.71 7 17.5S11.71 28 17.5 28 28 23.29 28 17.5 23.29 7 17.5 7zm0 18c-4.136.0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5S21.636 25 17.5 25z"/></svg></label><label id=toggle-label-dark for=darkmode-toggle tabindex=-1><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="nightIcon" viewBox="0 0 100 100" style="enable-background='new 0 0 100 100'"><title>Dark Mode</title><path d="M96.76 66.458c-.853-.852-2.15-1.064-3.23-.534-6.063 2.991-12.858 4.571-19.655 4.571C62.022 70.495 50.88 65.88 42.5 57.5 29.043 44.043 25.658 23.536 34.076 6.47c.532-1.08.318-2.379-.534-3.23-.851-.852-2.15-1.064-3.23-.534-4.918 2.427-9.375 5.619-13.246 9.491-9.447 9.447-14.65 22.008-14.65 35.369.0 13.36 5.203 25.921 14.65 35.368s22.008 14.65 35.368 14.65c13.361.0 25.921-5.203 35.369-14.65 3.872-3.871 7.064-8.328 9.491-13.246C97.826 68.608 97.611 67.309 96.76 66.458z"/></svg></label></div></header><article><h1>ECE120 Lecture 7</h1><p class=meta>Last updated April 15, 2022</p><ul class=tags></ul><aside class=mainTOC><details><summary>Table of Contents</summary><nav id=TableOfContents><ol><li><a href=#program-analysis>Program Analysis</a></li><li><a href=#testing-programs>Testing Programs</a></li><li><a href=#floating-points-are-tricky>Floating Points are Tricky!</a></li><li><a href=#bit-wise-calculation>Bit-wise Calculation</a></li></ol></nav></details></aside><h2 id=program-analysis>Program Analysis</h2><p>Being able to read code is a necessary skill.
+In the real world, codes are often poorly commented (few people are interested in commenting their codes). Therefore, it would be nice if we could interpret others&rsquo; codes without comments.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=cm>/* Adapted from V. Kindratenko&#39;s notes on 30 August 2016. */</span>
+</span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt; /* needed for printf and scanf */</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>A</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>char</span> <span class=n>B</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>C</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>D</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;Enter two numbers separated by a character: &#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=k>if</span> <span class=p>(</span><span class=mi>3</span> <span class=o>!=</span> <span class=n>scanf</span> <span class=p>(</span><span class=s>&#34;%d %c %d&#34;</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>A</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>B</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>C</span><span class=p>))</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;Please try again.</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Program failed. */</span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>3</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=k>if</span> <span class=p>(</span><span class=sc>&#39;+&#39;</span> <span class=o>==</span> <span class=n>B</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>D</span> <span class=o>=</span> <span class=n>A</span> <span class=o>+</span> <span class=n>C</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=sc>&#39;-&#39;</span> <span class=o>==</span> <span class=n>B</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>D</span> <span class=o>=</span> <span class=n>A</span> <span class=o>-</span> <span class=n>C</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=sc>&#39;/&#39;</span> <span class=o>==</span> <span class=n>B</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>D</span> <span class=o>=</span> <span class=n>A</span> <span class=o>/</span> <span class=n>C</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span> <span class=k>else</span> <span class=k>if</span> <span class=p>(</span><span class=sc>&#39;*&#39;</span> <span class=o>==</span> <span class=n>B</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>D</span> <span class=o>=</span> <span class=n>A</span> <span class=o>*</span> <span class=n>C</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span> <span class=k>else</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;Invalid choice &#39;%c&#39;</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>B</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Program failed. */</span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>2</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;answer: %d</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>D</span><span class=p>);</span> 
+</span></span><span class=line><span class=cl> <span class=cm>/* End the program successfully. */</span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><h2 id=testing-programs>Testing Programs</h2><p>In the world of programming, it&rsquo;s a wise choice to test your programs before true submission.
+<strong>Brooks&rsquo; Rule of Thumb</strong>:</p><ul><li>1/3 planning and design</li><li>1/6 writing the program</li><li>1/2 testing</li></ul><p>It&rsquo;s really no kidding. Programmers often make small mistakes in programming and it will take a long testing period to find out those mistakes.</p><h2 id=floating-points-are-tricky>Floating Points are Tricky!</h2><p>As we have shown <a class="internal-link broken">before</a>, floating point numbers are tricky to handle.
+Here is an example in C Programming:</p><p>Suppose we wish to find $\int^{1}_{-1}{(x^{2}+2x+3)} \mathrm{d}x$ by using C Programming.
+We could use an approximation of <a class="internal-link broken">Riemann Sum</a></p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>n</span> <span class=o>=</span> <span class=mi>100</span><span class=p>;</span> <span class=cm>/* hardcoded number of Riemann sum terms */</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=n>a</span> <span class=o>=</span> <span class=o>-</span><span class=mf>1.0f</span><span class=p>;</span> <span class=cm>/* hardcoded [a,b] */</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=n>b</span> <span class=o>=</span> <span class=mf>1.0f</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=n>s</span> <span class=o>=</span> <span class=mf>0.0f</span><span class=p>;</span> <span class=cm>/* computed integral value */</span>
+</span></span><span class=line><span class=cl> <span class=kt>int</span> <span class=n>i</span><span class=p>;</span> <span class=cm>/* loop counter */</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=n>x</span><span class=p>;</span> <span class=cm>/* x and y=f(x) */</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=n>y</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=kt>float</span> <span class=n>dx</span> <span class=o>=</span> <span class=p>(</span><span class=n>b</span> <span class=o>-</span> <span class=n>a</span><span class=p>)</span> <span class=o>/</span> <span class=n>n</span><span class=p>;</span> <span class=cm>/* width of rectangles */</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Sum n rectangles. */</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>n</span> <span class=o>&gt;</span> <span class=n>i</span><span class=p>;</span> <span class=n>i</span> <span class=o>=</span> <span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* x values are equally spaced from a to b. */</span>
+</span></span><span class=line><span class=cl> <span class=n>x</span> <span class=o>=</span> <span class=n>a</span> <span class=o>+</span> <span class=n>dx</span> <span class=o>*</span> <span class=n>i</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* y values are f(x). */</span>
+</span></span><span class=line><span class=cl> <span class=n>y</span> <span class=o>=</span> <span class=n>x</span> <span class=o>*</span> <span class=n>x</span> <span class=o>+</span> <span class=mi>2</span> <span class=o>*</span> <span class=n>x</span> <span class=o>+</span> <span class=mi>3</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Rectangle is y high and dx wide. */</span>
+</span></span><span class=line><span class=cl> <span class=n>s</span> <span class=o>=</span> <span class=n>s</span> <span class=o>+</span> <span class=n>y</span> <span class=o>*</span> <span class=n>dx</span><span class=p>;</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;%f</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span> <span class=n>s</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>Theoretically, as <code>n</code> gets larger, the result will become more accurate.</p><p><img src=/nicemewiki/Bin/Photos/ECE120Lec07Img1.png title=/nicemewiki/Bin/Photos/ECE120Lec07Img1.png>
+This is also how things develop when $\mathrm{n} &lt; 10^{6}$.</p><p>However, when $\mathrm{n}> 10^{6}$ , things becomes wired.
+<img src=/nicemewiki/Bin/Photos/ECE120Lec07Img2.png title=/nicemewiki/Bin/Photos/ECE120Lec07Img2.png></p><p>Why? Note an important part of the code above</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=n>s</span> <span class=o>=</span> <span class=n>s</span> <span class=o>+</span> <span class=n>y</span> <span class=o>*</span> <span class=n>dx</span><span class=p>;</span>
+</span></span></code></pre></td></tr></table></div></div><p>As <code>n</code> gets larger, <code>y * dx</code> gets smaller and smaller, and as we&rsquo;ve already mentioned earlier, a super-large number adding a super-small number causes errors in floating point.</p><h2 id=bit-wise-calculation>Bit-wise Calculation</h2><p>As we have learnt previously in Boolean Operations, C supports multiple bit-wise operations. We can use this interesting property to do efficient truth table printing:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span><span class=lnt> 2
+</span><span class=lnt> 3
+</span><span class=lnt> 4
+</span><span class=lnt> 5
+</span><span class=lnt> 6
+</span><span class=lnt> 7
+</span><span class=lnt> 8
+</span><span class=lnt> 9
+</span><span class=lnt>10
+</span><span class=lnt>11
+</span><span class=lnt>12
+</span><span class=lnt>13
+</span><span class=lnt>14
+</span><span class=lnt>15
+</span><span class=lnt>16
+</span><span class=lnt>17
+</span><span class=lnt>18
+</span><span class=lnt>19
+</span><span class=lnt>20
+</span><span class=lnt>21
+</span><span class=lnt>22
+</span><span class=lnt>23
+</span><span class=lnt>24
+</span><span class=lnt>25
+</span><span class=lnt>26
+</span><span class=lnt>27
+</span><span class=lnt>28
+</span><span class=lnt>29
+</span><span class=lnt>30
+</span><span class=lnt>31
+</span><span class=lnt>32
+</span><span class=lnt>33
+</span><span class=lnt>34
+</span><span class=lnt>35
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-c data-lang=c><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdint.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp>#include</span> <span class=cpf>&lt;stdio.h&gt;</span><span class=cp>
+</span></span></span><span class=line><span class=cl><span class=cp></span><span class=kt>int</span> <span class=nf>main</span> <span class=p>()</span>
+</span></span><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=cm>/*
+</span></span></span><span class=line><span class=cl><span class=cm> * The input variables A, B, and C are 8-bit unsigned values.
+</span></span></span><span class=line><span class=cl><span class=cm> * We use each bit to represent a possible combination of the
+</span></span></span><span class=line><span class=cl><span class=cm> * three variables.  Bit 7 of each is set to a 1, for example.
+</span></span></span><span class=line><span class=cl><span class=cm> * Bit 4 of A is set to 1, while bits 4 of B and C are set to 0.
+</span></span></span><span class=line><span class=cl><span class=cm> * In this way, we cover all entries of the truth table for
+</span></span></span><span class=line><span class=cl><span class=cm> * F(A,B,C).
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl> <span class=kt>uint8_t</span> <span class=n>A</span> <span class=o>=</span> <span class=mh>0xF0</span><span class=p>;</span> <span class=cm>/* input variable A                   */</span>
+</span></span><span class=line><span class=cl> <span class=kt>uint8_t</span> <span class=n>B</span> <span class=o>=</span> <span class=mh>0xCC</span><span class=p>;</span> <span class=cm>/* input variable B                   */</span>
+</span></span><span class=line><span class=cl> <span class=kt>uint8_t</span> <span class=n>C</span> <span class=o>=</span> <span class=mh>0xAA</span><span class=p>;</span> <span class=cm>/* input variable C                   */</span>
+</span></span><span class=line><span class=cl> <span class=kt>uint8_t</span> <span class=n>F</span><span class=p>;</span> <span class=cm>/* the function F                     */</span>
+</span></span><span class=line><span class=cl> <span class=kt>int32_t</span> <span class=n>i</span><span class=p>;</span> <span class=cm>/* truth table row iteration variable */</span>
+</span></span><span class=line><span class=cl> <span class=cm>/*
+</span></span></span><span class=line><span class=cl><span class=cm> * Compute all possible values of function F using one statement.
+</span></span></span><span class=line><span class=cl><span class=cm> *    F(A,B,C) = (A+B)(A&#39;+C&#39;)
+</span></span></span><span class=line><span class=cl><span class=cm> */</span>
+</span></span><span class=line><span class=cl> <span class=n>F</span> <span class=o>=</span> <span class=p>((</span><span class=n>A</span> <span class=o>|</span> <span class=n>B</span><span class=p>)</span> <span class=o>&amp;</span> <span class=p>((</span><span class=o>~</span><span class=n>A</span><span class=p>)</span> <span class=o>|</span> <span class=p>(</span><span class=o>~</span><span class=n>C</span><span class=p>)));</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Print a truth table for F. */</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;A B C | F</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;------+---</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl> <span class=k>for</span> <span class=p>(</span><span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=mi>8</span> <span class=o>&gt;</span> <span class=n>i</span><span class=p>;</span> <span class=n>i</span> <span class=o>=</span> <span class=n>i</span> <span class=o>+</span> <span class=mi>1</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl> <span class=n>printf</span> <span class=p>(</span><span class=s>&#34;%c %c %c | %c</span><span class=se>\n</span><span class=s>&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl> <span class=sc>&#39;0&#39;</span> <span class=o>+</span> <span class=p>(</span><span class=mi>0</span> <span class=o>!=</span> <span class=p>(</span><span class=n>i</span> <span class=o>&amp;</span> <span class=mi>4</span><span class=p>)),</span> <span class=cm>/* A        */</span>
+</span></span><span class=line><span class=cl> <span class=sc>&#39;0&#39;</span> <span class=o>+</span> <span class=p>(</span><span class=mi>0</span> <span class=o>!=</span> <span class=p>(</span><span class=n>i</span> <span class=o>&amp;</span> <span class=mi>2</span><span class=p>)),</span> <span class=cm>/* B        */</span>
+</span></span><span class=line><span class=cl> <span class=sc>&#39;0&#39;</span> <span class=o>+</span> <span class=p>(</span><span class=mi>0</span> <span class=o>!=</span> <span class=p>(</span><span class=n>i</span> <span class=o>&amp;</span> <span class=mi>1</span><span class=p>)),</span> <span class=cm>/* C        */</span>
+</span></span><span class=line><span class=cl> <span class=sc>&#39;0&#39;</span> <span class=o>+</span> <span class=p>(</span><span class=mi>0</span> <span class=o>!=</span> <span class=p>(</span><span class=n>F</span> <span class=o>&amp;</span> <span class=p>(</span><span class=mi>1</span> <span class=o>&lt;&lt;</span> <span class=n>i</span><span class=p>))));</span> <span class=cm>/* F(A,B,C) */</span>
+</span></span><span class=line><span class=cl> <span class=p>}</span>
+</span></span><span class=line><span class=cl> <span class=cm>/* Return success. */</span>
+</span></span><span class=line><span class=cl> <span class=k>return</span> <span class=mi>0</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></td></tr></table></div></div><p>How does this program come into effect?</p><p>Let&rsquo;s first analyze the final result we wish to have:
+$$
+F = (A+B)(\overline{A}+\overline{C})
+$$</p><table><thead><tr><th>A</th><th>B</th><th>C</th><th>F</th></tr></thead><tbody><tr><td>0</td><td>0</td><td>0</td><td>x</td></tr><tr><td>0</td><td>0</td><td>1</td><td>x</td></tr><tr><td>0</td><td>1</td><td>0</td><td>x</td></tr><tr><td>0</td><td>1</td><td>1</td><td>x</td></tr><tr><td>1</td><td>0</td><td>0</td><td>x</td></tr><tr><td>1</td><td>0</td><td>1</td><td>x</td></tr><tr><td>1</td><td>1</td><td>0</td><td>x</td></tr><tr><td>1</td><td>1</td><td>1</td><td>x</td></tr></tbody></table><p>It&rsquo;s not hard to comprehend why we choose <code>0xF0, 0xCC, 0xAA</code> for<code>A, B, C</code>
+If we rewrite them in binary, they&rsquo;ll be:
+$$
+\begin{align*}
+A&=11110000_2\\B&=11001100_2\\C&=10101010_2
+\end{align*}
+$$
+If we do bit-wise calculations on them, the corresponding <code>F</code> will be the result for each row of the truth table.</p><p>But what does <code>(0 != (i & 4))</code> means?
+Well, let&rsquo;s first analyze what <code>i & 4</code> does.</p><p>We&rsquo;ve known that $4_{10}=0\cdots 0100_{2}$
+Notice there&rsquo;s only one bit $1$ in $4_{10}$. Therefore, when we do the calculation of <code>i & 4</code>, for those $0$ bits, the result must be $0$, but for the 2nd bit (from behind), it will result in $1$ if the 2nd bit of <code>i</code> is $1$.</p><p>It becomes very interesting that from $0$ to $7$ ($0\cdots 0000_{2}$ to $0\cdots 0111_{2}$), the 2nd bit changes every 4 times.</p><p>For <code>i & 2</code>, the 1st bit changes every 2 times, for <code>i & 1</code>, the 0th bit changes every time! This is exactly what we want for <code>A, B, C</code>.</p></article><hr><div class=page-end><div class=backlinks-container><h3>Backlinks</h3><ul class=backlinks><li><a href=/nicemewiki/lecture_notes/ECE120/ECE120-MOC>ECE120 MOC</a></li></ul></div><div><script src=https://cdn.jsdelivr.net/npm/d3@6.7.0/dist/d3.min.js integrity="sha256-+7jaYCp29O1JusNWHaYtgUn6EhuP0VaFuswhNV06MyI=" crossorigin=anonymous></script><h3>Interactive Graph</h3><div id=graph-container></div><style>:root{--g-node:var(--secondary);--g-node-active:var(--primary);--g-node-inactive:var(--visited);--g-link:var(--outlinegray);--g-link-active:#5a7282}</style><script src=https://jnxc1234567890.github.io/nicemewiki/js/graph.27e8521c25c27c79dea35f434c486167.js></script>
 <script>drawGraph("https://jnxc1234567890.github.io/nicemewiki/lecture_notes/ECE120/ECE120-Lecture-7","https://jnxc1234567890.github.io/nicemewiki",[{"/moc":"#4388cc"}],-1,!0,!1,!0)</script></div></div><div id=contact_buttons><footer><p>Made by Chiming Ni using <a href=https://github.com/jackyzha0/quartz>Quartz</a>, © 2022</p><ul><li><a href=/>Home</a></li><li><a href=https://www.zhihu.com/people/nice_me>Zhihu</a></li><li><a href=https://github.com/jnxc1234567890>Github</a></li></ul></footer></div><script src=https://jnxc1234567890.github.io/nicemewiki/js/popover.e57188d2e4c06b0654e020b3a734bb62.min.js></script>
 <script>initPopover("https://jnxc1234567890.github.io/nicemewiki")</script></div></body></html>
