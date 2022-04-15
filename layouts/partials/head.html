@@ -42,15 +42,11 @@
             content,
           }))
     </script>
-    <!-- Mermaid Script -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script>mermaid.initialize({startOnLoad:true});
-    </script>
-    <script>
-      // Replace mermaid pre.code to div
-      Array.from(document.getElementsByClassName('language-fallback')).forEach(el => {
-          el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`
-      })
-  </script>
+    {{ if .Page.Store.Get "hasMermaid" }}
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <script>
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    {{ end }}
 </head>
 {{ template "_internal/google_analytics.html" . }}
