@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 1"
+title: "ECE120 Lecture 1 - Abstraction and Representation"
 ---
 
 ## Abstraction Layer

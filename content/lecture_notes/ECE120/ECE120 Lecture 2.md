@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 2"
+title: "ECE120 Lecture 2 - Numerical Representation"
 ---
 
 ## Unsigned [[lecture_notes/ECE120/ECE120 Lecture 1#Definition for representation|Representation]]
@@ -76,3 +76,6 @@ $$
 &\text{So that }\forall N \in \mathbb{Z}, \text{we have }(-k+N)\equiv(P_{k}+N) \mod 2^{N}.
 \end{align*}
 $$
+It's easy to find that the appropriate $P_{k}$ should be $$
+
+## Sign-Magnitude (optional)
