@@ -33,7 +33,7 @@ int values[10];
 We created ten 32-bit 2’s complement numbers (ten ints). Such a group is called an array. An **array** is the software analogue of a **memory**.
 
 ### Flow Chart
-```mermaid
+{{<mermaid>}}
 flowchart LR
 	subgraph INIT
 		direction TB
@@ -57,7 +57,8 @@ flowchart LR
 	end
 	done(DONE)
 	LOOP --> done
-```
+{{</mermaid>}}
+
 This is the entire flow chart of the C code. The division of the graph is done according to programming ideas. But in FSM, things won't be so easy, there's no LOOP and IF in FSM. So we need to be more specific.
 
 ### Components
