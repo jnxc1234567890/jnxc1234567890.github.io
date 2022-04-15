@@ -7,10 +7,10 @@ In order to represent an integer, the computer uses base-2 numbers from mathemat
 Due to hardware limitations, we cannot create representations that use arbitrary number of bits. Therefore, we use some fixed numbers of bits to represent a certain group of numbers, which introduced leading 0s.
 e.g.
 $$
-\begin{align}
+\begin{align*}
 17_{10}=00010001_2 \\
 42_{10}=00101010_2 
-\end{align}
+\end{align*}
 $$
 ### Conversion from Binary to Decimal
 The conversion from binary to decimal is quite straight forward, because the $i$th bit in binary represents $2^{i-1}$ .
@@ -23,7 +23,7 @@ $$
 It might not seem so straightforward as the previous one, but the core idea is the same.
 e.g. Convert $9_{10}$ to a 5-bit binary.
 $$
-\begin{align}
+\begin{align*}
 &\text{Assume } 9_{10} = a_4\cdot 2^4 + a_3\cdot 2^3 + a_2\cdot 2^2+a_1\cdot 2^1+a_0\cdot2^0. \\
 &\text{Clearly, the parity of the number determined }a_0. \\
 &(9-a_0) \div 2 = a_4\cdot 2^3 + a_3\cdot 2^2 + a_2\cdot 2^1+a_1\cdot 2^0 \\
@@ -31,31 +31,31 @@ $$
 &((9-a_0)-a_1) \div 2=a_4\cdot 2^2 + a_3\cdot 2^1 + a_2\cdot 2^0 \\
 &\text{ Clearly, the parity of the number determined } a_2. \\
 &\cdots
-\end{align}
+\end{align*}
 $$
 
 ## Addition of Unsigned Representation
 Binary addition is almost the same as decimal addition.
 e.g. $01001_2+01110_2$
 $$
-\begin{align}
+\begin{align*}
 _1\quad \quad  &\\
 01001&\\
 +01110&\\
 \hline
 10111&
-\end{align}
+\end{align*}
 $$
 However, sometimes things go wrong.
 e.g. $01001_2+11110_2$
 $$
-\begin{align}
+\begin{align*}
 _{1\ 1} \quad \quad  &\\
 01001&\\
 +11110&\\
 \hline
 ①10111&
-\end{align}
+\end{align*}
 $$
 Note there is a carry out 1. Because of bit limitation, it did not appear in the final result, causing a mismatch. This kind of phenomena is called overflow.
 
