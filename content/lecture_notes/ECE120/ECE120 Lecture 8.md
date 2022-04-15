@@ -11,7 +11,7 @@ There're two kinds, named after the charge carrier.
 - n(egative)-type
 - p(ositive)-type
 
-![[lecture_notes/ECE120/images/Pasted image 20220415113217.png]]
+![[lecture_notes/ECE120/images/Pasted image 20220415113217.png|300]]
 
 An n-type MOSFET turns on if the Gate voltage exceeds threshold while the p-type do the opposite.
 
