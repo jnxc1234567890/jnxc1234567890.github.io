@@ -22,3 +22,4 @@ for (idx = 1; 10 > idx; idx = idx + 1)
 
 How to transform this code into a finite state machine?
 
+## Code Analysis
