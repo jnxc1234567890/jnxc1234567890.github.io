@@ -48,7 +48,7 @@
     </script>
     <script>
       // Replace mermaid pre.code to div
-      Array.from(document.getElementsByClassName('language-mermaid')).forEach(el => {
+      Array.from(document.getElementsByClassName('language-fallback')).forEach(el => {
           el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`
       })
   </script>
