@@ -164,3 +164,47 @@ Our datapath also generates 3 outputs, which are inputs of FSM:
 ### Register Transfer Language
 We’ll use **register transfer language (RTL)** notation to describe the state’s actions on the datapath.
 
+| state   | actions(simultaneous)                    | condition         | next state       |
+| ------- | ---------------------------------------- | ----------------- | ---------------- |
+| WAIT    | IDX ← 0                                  | START</br> START' | INIT</br>WAIT    |
+| INIT    | MIN ← VALUES[IDX]</br>IDX ← IDX+1        | (always)          | PREP             |
+| PREP    | A ← MIN</BR> B ← VALUES[IDX]</BR>CNT ← 0 | (always)          | COMPARE          |
+| COMPARE | run serial comparator                    | LAST</BR>LAST'    | COPY</BR>COMPARE |
+| COPY    | THEN:MIN ← VALUES[IDX]</BR>IDX ← IDX+1   | DONE</BR>DONE'    | WAIT</BR>PREP    | 
+
+### One-Hot Encoding
+We'll use 5 bits instead of 3 bits to store states here, this encoding is called **one-hot encoding**.
+
+### Output Table
+
+| state   | $S_{4}S_{3}S_{2}S_{1}S_{0}$ | IDX.RST | IDX.CNT | MIN.LD | A.LD | B.LD | CNT.RST |
+| ------- | --------------------------- | ------- | ------- | ------ | ---- | ---- | ------- |
+| WAIT    | 10000                       | 1       | 0       | 0      | 0    | 0    | 0       |
+| INIT    | 01000                       | 0       | 1       | 1      | 0    | 0    | 0       |
+| PREP    | 00100                       | 0       | 0       | 0      | 1    | 1    | 1       |
+| COMPARE | 00010                       | 0       | 0       | 0      | 0    | 0    | 0       |
+| COPY    | 00001                       | 0       | 1       | THEN   | 0    | 0    | 0       | 
+
+Due to one-hot encoding, expressing outputs will be quite easy:
+$$
+
+\begin{align*}
+&IDX.RST = S_{4}\\
+& IDX.CNT = S_{3} + S_{0}\\
+& MIN.LD = S_{3} + THEN · S_{0} \\
+&(\text{others}) = S_{2}
+\end{align*}
+$$
+
+### Next-State
+As a matter of fact, another benefit of one-hot encoding is an easier way to express next-state expressions.
+
+$$
+\begin{align*}
+&S_{4}^{+}=S_{4}·START'+S_{0}·DONE\\
+&S_{3}^{+}=S_{4}·START\\
+&S_{2}^{+}=S_{3}+S_{0}·DONE'\\
+&S_{1}^{+}=S_{2}+S_{1}·LAST'\\
+&S_{0}^{+}=S_{1}·LAST
+\end{align*}
+$$
