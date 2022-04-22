@@ -12,5 +12,5 @@ Of course, increasing model complexity also might achieve a good classification.
 
 When the Logistic Regression is replaced with a MLP, the performance greatly increases.
 ![[lecture_notes/ML_seminars/images/Pasted image 20220422225219.png]]
-See the code for this example at [[lecture_notes/ML_seminars/rep_example.py|code]].
+See the code for this example at [code](https://jnxc1234567890.github.io/lecture_notes/ML_seminars/rep_example.py).
 
