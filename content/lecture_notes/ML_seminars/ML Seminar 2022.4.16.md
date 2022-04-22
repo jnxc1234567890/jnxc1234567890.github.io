@@ -1,5 +1,5 @@
 ---
-title: "ML Semiar 2022.4.16"
+title: "ML Seminar 2022.4.16"
 ---
 ## Group Activity Recognition
 Predicting group activity.
