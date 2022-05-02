@@ -3,6 +3,7 @@ title: "ECE120 Lecture 7"
 ---
 ## Program Analysis
 Being able to read code is a necessary skill.
+
 In the real world, codes are often poorly commented (few people are interested in commenting their codes). Therefore, it would be nice if we could interpret others' codes without comments.
 ```c
 /* Adapted from V. Kindratenko's notes on 30 August 2016. */

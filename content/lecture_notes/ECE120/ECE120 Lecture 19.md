@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 19"
+title: "ECE120 Lecture 19 - FSM and Binary Counter"
 ---
 
 ## FSM

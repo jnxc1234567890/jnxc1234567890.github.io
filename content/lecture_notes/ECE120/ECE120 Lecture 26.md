@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 24 - The von Neumann Model"
+title: "ECE120 Lecture 26 - The von Neumann Model"
 ---
 
 ## The von Neumann Model

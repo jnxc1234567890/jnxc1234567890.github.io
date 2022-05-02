@@ -22,6 +22,7 @@ title: "Calculus"
 		- [Techniques of Integration](wikipages/Techniques%20of%20Integration.md)
 		- Applications of Integration
 	- Sequence and Series
-		- [Sequence and Series](wikipages/Sequence%20and%20Series.md)
+		- [Infinite Sequence and Series](wikipages/Infinite%20Sequence%20and%20Series.md)
+		- [[wikipages/Taylor Series|Taylor Series]]
 - Multi Variable Calculus
 	- 
