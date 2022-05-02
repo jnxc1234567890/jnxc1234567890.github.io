@@ -7,9 +7,9 @@ An infinite sequence is a list of numbers in a definite order. Rigorously speaki
 > **NOTATION**:
 > A sequence is usually denoted by:
 > $$
-\begin{align}
+\begin{align*}
 &\{ a_{1},a_{2},\dots \}&\text{or}&&\{ a_{n} \} &&\text{or}&& \{ a_{n} \}^{\infty}_{n=1}
-\end{align}$$
+\end{align*}$$
 
 ### Convergence of Sequence
 
@@ -49,14 +49,14 @@ $$
 > **DEFINITION**:
 > A sequence $\{ a_{n} \}$ is **bounded above** if there is a  number $M$ such that
 > $$
-\begin{align}
+\begin{align*}
 &a_{n}\leq M &\text{for all }n\geq 1 \\
-\end{align}$$
+\end{align*}$$
 >It's bounded below if there is a number $m$ such that
 >$$
-\begin{align}
+\begin{align*}
 &a_{n}\geq  m &\text{for all }n\geq 1 \\
-\end{align}$$
+\end{align*}$$
 >If it's bounded both above and below, it's a **bounded sequence**.
 
 ### Monotonic Sequence Theorem
@@ -67,4 +67,7 @@ $$
 An infinite series is the sum of all terms in an infinite sequence.
 
 >**NOTATION**:
->
+>The usual notation for series is Sigma Notation:
+>$$
+
+$$
