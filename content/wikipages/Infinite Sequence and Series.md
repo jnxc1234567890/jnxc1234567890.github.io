@@ -22,9 +22,11 @@ An infinite sequence is a list of numbers in a definite order. Rigorously speaki
 ### Convergence to 0 and Absolute Value
 >**THEOREM**:
 >$$
-\lim_{ n \to \infty } \left| a_{n} \right| =0 \implies \lim_{ n \to \infty } a_{n}=0$$
+\begin{align*}
+\lim_{ n \to \infty } \left| a_{n} \right| =0 \implies \lim_{ n \to \infty } a_{n}=0\tag{1}
+\end{align*}$$
 
-**Proof**:
+**PROOF**:
 Consider $b_{n}=\left| a_n \right|,\ c_{n}=-\left| a_n \right|$.
 Clearly,
 $$
@@ -61,7 +63,10 @@ $$
 
 ### Monotonic Sequence Theorem
 >**THEOREM**:
->Every bounded, monotonic sequence is convergent.
+>$$
+\begin{align*}
+\text{Every bounded, monotonic sequence is convergent.}\tag{2}
+\end{align*}$$
 
 ## Series
 An infinite series is the sum of all terms in an infinite sequence.
@@ -69,5 +74,50 @@ An infinite series is the sum of all terms in an infinite sequence.
 >**NOTATION**:
 >The usual notation for series is Sigma Notation:
 >$$
+\begin{align*}
+&\sum^\infty_{n=1}a_{n} && \text{or} && \sum a_{n}
+\end{align*}$$
 
+
+### Partial Sum and Convergence of Series
+>**DEFINITION**:
+>The **partial sum** of a series $\sum a_{n}$ is defined by:
+>$$
+s_{n}=\sum^n_{i=1}a_{i}$$
+>If $\{ s_{n} \}$ is convergent, i.e. $\lim_{ n \to \infty } s_{n}=s$, the series $\sum a_{n}$ is called **convergent** and we have
+>$$
+\sum^\infty_{n=1}a_{n}=s$$
+>If $\{ s_{n} \}$ is divergent, the series is divergent.
+
+### Geometric Series
+The **geometric series**
+$$
+\sum^\infty_{n=1}ar^{n-1}=a+ar+ar^2+\dots 
+$$
+is convergent if and only if $\left| r \right| <1$ and and its sum is
+$$
+\sum^\infty_{n=1}ar^{n-1}=\frac{a}{1-r}
+$$
+### Harmonic Series
+
+### Test for Divergence
+>**THEOREM**:
+>$$
+\begin{align*}
+\sum^\infty_{n=1}a_{n}=s \implies \lim_{ n \to \infty } a_{n}=0\tag{3}
+\end{align*}
+$$
+
+**PROOF**:
+Assume $s_{n}=\sum^n_{i=1}a_{i}$, then $a_{n}=s_{n}-s_{n-1}$.
+We have:
+$$
+\lim_{ n \to \infty } a_{n}=\lim_{ n \to \infty } (s_{n}-s_{n-1})=\lim_{ n \to \infty } s_{n}-\lim_{ n \to \infty } s_{n-1}=s-s=0
+$$
+The contrapositive of $(3)$ is called **test for divergence**.
+>**THEOREM** (*Test for Divergence*):
+>$$
+\begin{align*}
+\lim_{ n \to \infty } a_{n}\neq 0 \text{ or DNE}\tag{4} \implies \sum^\infty_{n=1}a_{n}\text{ is divergent}
+\end{align*}
 $$
