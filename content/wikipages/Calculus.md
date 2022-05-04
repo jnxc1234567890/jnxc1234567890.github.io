@@ -23,6 +23,7 @@ title: "Calculus"
 		- Applications of Integration
 	- Sequence and Series
 		- [Infinite Sequence and Series](wikipages/Infinite%20Sequence%20and%20Series.md)
+		- [[wikipages/Series Convergence Tests|Series Convergence Tests]]
 		- [[wikipages/Taylor Series|Taylor Series]]
 - Multi Variable Calculus
 	- 

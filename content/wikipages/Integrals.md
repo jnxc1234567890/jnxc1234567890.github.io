@@ -2,27 +2,22 @@
 title: "Integrals"
 ---
 ## Definition of Definite Integral
-$$
-\boxed{
-\begin{align*}
-&\mathrm{ If\ } f\ \mathrm{is\ a\ function\ defined\ for\ }a < x < b, \mathrm{we\ divide\ the\ interval\ } [a, b]\\
-&\mathrm{into\ } n\ \mathrm{subintervals\ of\ equal\ width\ } \Delta x = (b-a)/n.\\
-&\mathrm{We\ let}\ x_{0}(=a), x_{1}, x_{2}, \cdots , x_{n} (=b) \mathrm{be\ the\ endpoints\ of\ these\ }\\
-& \mathrm{subintervals\ and\ we\ let}\ x_{1}^{*}, x_{2}^{*},\cdots, x_{n}^{*}\ \mathrm{be\ any\ sample\ points\ in}\\\
-& \mathrm{these\ subintervals\ ,\\
-so}\ x_{i}^{*}\ \mathrm{lies\ in\ the\ }  i \mathrm{th\ subinterval}\ [x_{i-1}, x_{i}].\\
-& \mathrm{Then\ the\ definite\ integral\ of}\ f\ \mathrm{from}\ a\ \mathrm{to}\ b\ \mathrm{is}\\
-&\int_{a}^{b}{f(x) \mathrm{d}x}=\lim_{n\to\infty}\sum\limits_{i=1}^{n}f(x_{i}^{*})\Delta x\\
-&\mathrm{provided\ that\ this\ limit\ exists\ and\ gives\ the\ same\ value\ for\ all\ } \\
-&\mathrm{possible\ choices\ of\ sample\ points.} \\
-&\mathrm{If\ it\ does\ exist\, we\ say\ that\ } f\ \mathrm{ is\ integrable\ on\ } [a, b].
-\end{align*}
-}
-$$
+>**DEFINITION**:
+>If $f$ is a function defined for $a<x<b$, we divide the interval $[a,b]$ into $n$ subintervals of euqal width $\Delta x=(b-a)/n$.
+>We let $x_0(=a),x_1,x_2,\cdots,x_n(=b)$ be the endpoints of these subintervals and we let $x_1^*,x_2^*,\cdots,x_n^*$ be any sample points in these subintervals, meaning $x_i^*$ lies in the $i$th subinterval $[x_{i-1},x_i]$.
+>Then the **definite integral** of $f$ from $a$ to $b$ is
+>$$
+\int^{b}_{a} f(x) \, dx=\lim_{ n \to \infty } \sum^\infty_{i=1}f(x_{i}^*)\Delta x $$
+>provided that this limit exists and gives the same value for all possible choices of sample points.
+>If it does exist we say that $f$ is integrable on $[a,b]$.
+
 ## Definition of Indefinite Integral
+>**DEFINITION**:
+>
 
-## Fundamental Rules of Calculus
-
+## The Fundamental Theorem of Calculus
+>**THEOREM** (*The Fundamental Theorem of Calculus*):
+>
 
 ## Improper Integral
 ### How improper integral happens?

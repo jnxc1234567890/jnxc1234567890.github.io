@@ -19,7 +19,7 @@ An infinite sequence is a list of numbers in a definite order. Rigorously speaki
 \lim_{ n \to \infty } a_{n} = L$$
 >In other cases, we say the sequence **diverges**.
 
-### Convergence to 0 and Absolute Value
+### Absolute Value and Convergence to 0
 >**THEOREM**:
 >$$
 \begin{align*}
@@ -38,14 +38,14 @@ $$
 $$
 ### Convergence of $\{ r^{n} \}$
 With some simple calculation, we'll find:
-The sequence $\{ r^n \}$ is convergent if $-1<r\leq 1$ and divergent for all other values of $r$.
-i.e.
-$$
+>**Example**:
+>The sequence $\{ r^n \}$ is convergent if $-1<r\leq 1$ and divergent for all other values of $r$.
+>i.e.
+>$$
 \lim_{ n \to \infty } r^{n} = \begin{cases}
 0 &\text{ if }&-1<r<1 \\
 1 &\text{ if }&r=1
-\end{cases}
-$$
+\end{cases}$$
 
 ### Bounded Sequence
 > **DEFINITION**:
@@ -90,14 +90,14 @@ s_{n}=\sum^n_{i=1}a_{i}$$
 >If $\{ s_{n} \}$ is divergent, the series is divergent.
 
 ### Geometric Series
-The **geometric series**
-$$
-\sum^\infty_{n=1}ar^{n-1}=a+ar+ar^2+\dots 
-$$
-is convergent if and only if $\left| r \right| <1$ and and its sum is
-$$
-\sum^\infty_{n=1}ar^{n-1}=\frac{a}{1-r}
-$$
+>**Example**:
+>The **geometric series**
+>$$
+\sum^\infty_{n=1}ar^{n-1}=a+ar+ar^2+\dots $$
+>is convergent if and only if $\left| r \right| <1$ and and its sum is
+>$$
+\sum^\infty_{n=1}ar^{n-1}=\frac{a}{1-r}$$
+
 ### Harmonic Series
 
 ### Test for Divergence
@@ -105,8 +105,7 @@ $$
 >$$
 \begin{align*}
 \sum^\infty_{n=1}a_{n}=s \implies \lim_{ n \to \infty } a_{n}=0\tag{3}
-\end{align*}
-$$
+\end{align*}$$
 
 **PROOF**:
 Assume $s_{n}=\sum^n_{i=1}a_{i}$, then $a_{n}=s_{n}-s_{n-1}$.
@@ -114,10 +113,38 @@ We have:
 $$
 \lim_{ n \to \infty } a_{n}=\lim_{ n \to \infty } (s_{n}-s_{n-1})=\lim_{ n \to \infty } s_{n}-\lim_{ n \to \infty } s_{n-1}=s-s=0
 $$
-The contrapositive of $(3)$ is called **test for divergence**.
+
+The contrapositive of [[wikipages/Infinite Sequence and Series#Test for Divergence|(3)]] is called **test for divergence**.
+
 >**THEOREM** (*Test for Divergence*):
 >$$
 \begin{align*}
 \lim_{ n \to \infty } a_{n}\neq 0 \text{ or DNE}\tag{4} \implies \sum^\infty_{n=1}a_{n}\text{ is divergent}
-\end{align*}
+\end{align*}$$
+
+### Absolute Convergence
+>**DEFINITION**:
+>A series $\sum a_{n}$ is called **absolutely convergent** if $\sum |a_{n}|$ is convergent.
+>If $\sum a_{n}$ is convergent and $\sum |a_{n}|$  is divergent we call the series **conditionally convergent**.
+
+Similar to sequence [[wikipages/Infinite Sequence and Series#Absolute Value and Convergence to 0|above]], the absolute value of  series also implies somthing about convergence.
+>**THEOREM**:
+>$$
+\begin{align*}
+\sum \left| a_{n} \right| \text{ is convergent}\implies \sum  a_{n}  \text{ is convergent}\tag{5}
+\end{align*}$$
+
+**PROOF**:
+Obviously, we could have:
 $$
+0\leq a_{n}+\left| a_{n} \right| \leq 2|a_{n}|
+$$
+According to [[wikipages/Series Convergence Tests#Comparison Test and Limit Comparison Test|Comparison Test]],
+$$
+\sum 2|a_{n}| \text{ is convergent}\implies \sum (a_{n}+|a_{n}|) \text{ is convergent}
+$$
+Notice that
+$$\sum a_{n}=\sum (a_{n}+|a_{n}|)-|a_{n}|=\sum (a_{n}+|a_{n}|)-\sum |a_{n}|$$
+$\sum a_{n}$ is the difference of two convergent series therefore converges.
+
+### Remainder Estimation
