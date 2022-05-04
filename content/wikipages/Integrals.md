@@ -11,19 +11,30 @@ title: "Integrals"
 >provided that this limit exists and gives the same value for all possible choices of sample points.
 >If it does exist we say that $f$ is integrable on $[a,b]$.
 
-## Definition of Indefinite Integral
->**DEFINITION**:
->
-
 ## The Fundamental Theorem of Calculus
 >**THEOREM** (*The Fundamental Theorem of Calculus*):
->
+>**Part I**: If $f$ is continous on $[a,b]$, then the function $g$ defined by
+>$$
+\begin{align*}
+&g(x)=\int ^x_{a}f(t) \, dt &&a\leq x\leq b
+\end{align*}$$
+>is continous on $[a,b]$ and differentiable on $(a,b)$, and $g'(x)=f(x)$.
+>**Part II**: If $f$ is continous on $[a,b]$, then
+>$$
+\int ^b_{a}f(x) \, dx=F(b)-F(a) $$
+>where $F$ is any antiderivative of $f$, i.e. $F'(x)=f(x)$.
+
+## Definition of Indefinite Integral
+>**DEFINITION**:
+>The **indefinite integral** of a function $f$ is the notation for the *antiderivative* of $f$.
+>Thus:
+>$$F(x)=\int f(x) \, dx \iff F'(x)=f(x)$$
 
 ## Improper Integral
 ### How improper integral happens?
 Recall the definition of [[wikipages/Integrals#Definition of Definite Integral|definite integrals]]. There're some cases that make a definite integral incomputable:
 1. The first case is when $a$ or $b$ becomes an infinite number. e.g. $\int^{\infty}_{a}f(x)\mathrm{d}x$
-2. The second case is when there is a point $x_{0}\in[a,b]$ that $f(x_{0})$ is not integrable. e.g. $\int^{1}_{0}\frac{1}{x-0.5}\mathrm{d}x$
+2. The second case is when there is a point $x_{0}\in[a,b]$ that $f(x_{0})$ is not integrable. e.g. $\int^{1}_{0}\frac{1}{x-0.5}\mathrm{d}x$.
 
 ### Types of Improper Integrals
 #### Type I: Infinite Integrals

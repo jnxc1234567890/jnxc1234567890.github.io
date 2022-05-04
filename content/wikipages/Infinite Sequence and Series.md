@@ -99,6 +99,14 @@ s_{n}=\sum^n_{i=1}a_{i}$$
 \sum^\infty_{n=1}ar^{n-1}=\frac{a}{1-r}$$
 
 ### Harmonic Series
+>**Example**:
+>The **harmonic series**
+>$$
+\sum^\infty_{n=1} \frac{1}{n}=1+\frac{1}{2}+\frac{1}{3}+\dots $$
+>is divergent.
+
+**PROOF**:
+Please reference the [Wikipedia page](https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)) for more.
 
 ### Test for Divergence
 >**THEOREM**:
@@ -146,5 +154,3 @@ $$
 Notice that
 $$\sum a_{n}=\sum (a_{n}+|a_{n}|)-|a_{n}|=\sum (a_{n}+|a_{n}|)-\sum |a_{n}|$$
 $\sum a_{n}$ is the difference of two convergent series therefore converges.
-
-### Remainder Estimation
