@@ -4,7 +4,7 @@ title: "ECE120 Lecture 19 - FSM and Binary Counter"
 
 ## FSM
 ### Definition of FSM
-A FSM consists of five parts:
+A **Finite State Machine** consists of five parts:
 1. Finite set of states
 2. Set of inputs
 3. Set of outputs(only dependent on state)
@@ -50,6 +50,7 @@ Similarly, we need 3 bits for inputs as well: $U,L,P$
 | driver door unlocked | DRIVER   | 10   | 1   | 0   | 0   |
 | all doors unlocked   | UNLOCKED | 11   | 1   | 1   | 0   |
 | alarm sounding       | ALARM    | 01   | 0   | 0   | 1   |          |          |      |     |     |     |
+
 ##### $S_{1}^{+}S_{0}^{+}$ for the Next State
 When we're trying to express the next state, we'll use the notation of $S_{1}^{+}S_{0}^{+}$ to represent values in the next clock cycle.
 Therefore, our current objective becomes finding the truth table for $S_{1}^{+}S_{0}^{+}$ according to $S_{1},S_{0},U,L,P$.

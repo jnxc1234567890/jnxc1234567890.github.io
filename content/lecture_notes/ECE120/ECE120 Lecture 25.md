@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 23 - From FSM to Computer"
+title: "ECE120 Lecture 25 - From FSM to Computer"
 ---
 
 ## FSM and Code

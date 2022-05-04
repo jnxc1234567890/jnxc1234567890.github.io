@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 22 - Memory"
+title: "ECE120 Lecture 24 - Memory"
 ---
 ## Storing Lots of Bits
 The computer we’re going to design has a lot of places to store bits. Each place stores 32 bits. We need names for the places. The best way is to assign them with a number.
