@@ -26,10 +26,10 @@ ECE120: Intro to Computing Systems is a UIUC course about the structure of compu
 19. [[lecture_notes/ECE120/ECE120 Lecture 19|Lecture 19]]
 20. [[lecture_notes/ECE120/ECE120 Lecture 20|Lecture 20]]
 21. [[lecture_notes/ECE120/ECE120 Lecture 21|Lecture 21]]
-22. [[lecture_notes/ECE120/ECE120 Lecture 24|Lecture 22]]
-23. [[lecture_notes/ECE120/ECE120 Lecture 25|Lecture 23]]
-24. [[lecture_notes/ECE120/ECE120 Lecture 26|Lecture 24]]
-25. [[lecture_notes/ECE120/ECE120 Lecture 27|Lecture 25]]
+22. [[lecture_notes/ECE120/ECE120 Lecture 24|Lecture 24]]
+23. [[lecture_notes/ECE120/ECE120 Lecture 25|Lecture 25]]
+24. [[lecture_notes/ECE120/ECE120 Lecture 26|Lecture 26]]
+25. [[lecture_notes/ECE120/ECE120 Lecture 27|Lecture 27]]
 
 ## Lab Notes
 1. [[Lab 1]]

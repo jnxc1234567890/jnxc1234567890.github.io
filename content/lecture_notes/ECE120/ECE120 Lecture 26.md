@@ -39,7 +39,6 @@ flowchart LR
 	i --> j
 ```
 
-
 ## LC-3 as a von Neumann Machine
 The Little Computer-3 (LC-3) ISA is an educational tool.
 

@@ -39,5 +39,4 @@ sum all non-letter bins
 
 ### The Best Algorithm Depends
 
-
 ## 
