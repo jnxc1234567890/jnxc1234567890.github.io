@@ -1,3 +1,3 @@
 ---
-title: "ECE120 Lecture 30"
+title: "ECE120 Lecture 30 - "
 ---

@@ -38,5 +38,6 @@ sum all non-letter bins
 ```
 
 ### The Best Algorithm Depends
+The best algorithm depends on the metrics you choose. But we'll go with algorithm II here because it's both time-efficient and space-efficient.
 
-## 
+## Flowchart
