@@ -1,6 +1,9 @@
 ---
 title: "Series Convergence Tests"
 ---
+## Test for Divergence
+See [[wikipages/Infinite Sequence and Series#Test for Divergence|Test for Divergence]].
+
 ## Integral Test
 >**THEOREM** (*Integral Test*):
 >Suppose $f$ is a continous, positive, decreasing function on $[1,\infty)$ and we have $a_{n}=f(n)$. Then the following statements are true:
