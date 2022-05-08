@@ -46,7 +46,6 @@ $$
 $$
 
 ## Upper-case Checker
-
 The final design is about upper-case checker, that is, a circuit checking whether an ASCII character is an upper-case letter.
 We assume the input is 7-bit. $C=C_{6}C_{5}C_{4}C_{3}C_{2}C_{1}C_{0}$.
 
