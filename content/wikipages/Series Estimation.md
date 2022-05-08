@@ -29,4 +29,10 @@ $$
 >$$
 \left| R_{n} \right| =\left| s-s_{n} \right| \leq b_{n+1}$$
 
-## 
+## Taylor Series Remainder Estimation
+>**THEOREM** (*Taylor's Inequality*):
+>If $|f^{(n+1)}(x)|\leq M$ for $|x-a|\leq d$, then the remainder $R_n(x)$ for the Taylor series satisfies the inequality
+>$$
+\begin{align*}
+&\left| R_{n}(x) \right| \leq \frac{M}{(n+1)!}\left| x-a \right| ^{n+1}&&\text{for }|x-a|\leq d
+\end{align*}$$
