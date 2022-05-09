@@ -26,6 +26,7 @@ title: "Calculus"
 		- [[wikipages/Series Convergence Tests|Series Convergence Tests]]
 		- [[wikipages/Series Estimation|Series Estimation]]
 		- [[wikipages/Taylor Series|Taylor Series]]
-	- Parametric
+	- Parametric Equations
+		- [[wikipages/Calculus in Parametric Curves]]
 - Multi Variable Calculus
 	- 
