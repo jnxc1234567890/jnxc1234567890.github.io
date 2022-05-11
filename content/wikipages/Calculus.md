@@ -27,7 +27,7 @@ title: "Calculus"
 		- [[wikipages/Series Estimation|Series Estimation]]
 		- [[wikipages/Taylor Series|Taylor Series]]
 	- Parametric Equations
-		- [[wikipages/Calculus in Parametric Curves]]
-		- [[wikipages/Polar Coordinates]]
+		- [[wikipages/Calculus in Parametric Curves|Parametric Curves]]
+		- [[wikipages/Polar Coordinates|Polar Coordinates]]
 - Multi Variable Calculus
 	- 
