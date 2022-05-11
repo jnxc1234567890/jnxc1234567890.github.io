@@ -99,9 +99,9 @@ If $\lim_{ n \to \infty } R_{n}(x)=0$, then it is very clear that the Taylor ser
 >**THEOREM**:
 >If $f(x)=T_{n}(x)+R_{n}(x)$, where $T_{n}$ is the $n$th-degree Taylor polynomial of $f$ at $a$ and
 >$$
-\begin{aligned}
+\begin{align*}
 \lim_{ n \to \infty } R_{n}=0&&\text{for }\left| x-a \right|<R 
-\end{aligned}$$
+\end{align*}$$
 >then $f$ equals to the sum of its Taylor series on the intverval $(x-R,x+R)$.
 
 ### Condition of Taylor Series
