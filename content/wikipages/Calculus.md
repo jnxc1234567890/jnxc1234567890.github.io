@@ -28,5 +28,6 @@ title: "Calculus"
 		- [[wikipages/Taylor Series|Taylor Series]]
 	- Parametric Equations
 		- [[wikipages/Calculus in Parametric Curves]]
+		- [[wikipages/Polar Coordinates]]
 - Multi Variable Calculus
 	- 
