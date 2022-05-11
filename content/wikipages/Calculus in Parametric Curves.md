@@ -31,7 +31,7 @@ The arc length of a curve $y=F(x)$ in an interval $a\leq x\leq b$ is $L=\int ^b_
 
 Using (1) to replace $\frac{dy}{dx}$, we get
 >**THEOREM**:
->If a curve $C$ is described by the parametric equations $x=f(t),y=g(t)$, $\alpha\leq t\leq \beta$, where $f'$ and $g'$ are continuous on $[\alpha,\beta]$ and $C$ is traversed exactly once as $t$ increases from $\alpha$ to $\beta$, then the length of $C$ is
+>If a curve $C$ is described by the parametric equations $x=f(t),y=g(t) ,\alpha\leq t\leq \beta$, where $f'$ and $g'$ are continuous on $[\alpha,\beta]$ and $C$ is traversed exactly once as $t$ increases from $\alpha$ to $\beta$, then the length of $C$ is
 >$$
 \begin{align*}
 L&=\int ^b_{a}\sqrt{ 1+\left( \frac{ dy }{ dx }  \right)^2 } \, dx=\int _{\alpha}^\beta \sqrt{ 1+\left( \frac{\frac{dy}{dt}}{\frac{dx}{dt}} \right)^2 } \frac{dx}{dt} \, dt\\
@@ -43,3 +43,6 @@ Note that even if $y=F(x)$ is not a function, (4) still holds because the equati
 ## Surface Area of Revolution in Parametric Curves
 Similar to arc length, we can also have a parametric version of surface area of revolution.
 
+>**THEOREM**:
+>If a curve $C$ is described by the parametric equations
+>$x=f(t),y=g(t),\alpha\leq t\leq \beta$, where 
