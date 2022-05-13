@@ -34,3 +34,8 @@ Suppose we have a polar curve equation $F(r,\theta)=0$.
 >The tangent to a point $P$ in a polar curve is given by:
 >$$
 \frac{dy}{dx}=\frac{\frac{dy}{d\theta}}{\frac{dx}{d\theta}}=\frac{ \frac{dr}{d\theta}\sin\theta+r\cos\theta }{\frac{dr}{d\theta}\cos\theta-r\sin\theta}$$
+
+## Area in Polar Curves
+
+
+## Arc Length in Polar Curves
