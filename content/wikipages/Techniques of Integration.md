@@ -38,9 +38,7 @@ $$
 \int f(ax+b)\ dx\xlongequal{u=ax+b}\frac{1}{a}\int f(u)\ du
 $$
 2. 
-$$
 
-$$
 #### Backward Substitution
 
 ## Integration by Parts
