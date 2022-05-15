@@ -14,3 +14,4 @@ Strategic behavior in oligopoly:
 
 The study of how people behave in strategic situations leads to **game theory**.
 
+## 
