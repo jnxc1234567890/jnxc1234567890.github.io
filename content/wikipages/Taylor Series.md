@@ -3,7 +3,7 @@ title: "Taylor Series"
 ---
 ## Power Series
 >**DEFINITION**:
->A **powe series** is an infinite order polynomial, i.e.
+>A **power series** is an infinite order polynomial, i.e.
 >$$
 \sum^\infty_{n=0} c_{n}(x-a)^n=c_{0}+c_{1}(x-a)+c_{2}(x-a)^2+\dots $$
 >where $x$ is a variable and $c_{n}$ are constants called coefficients.
@@ -28,14 +28,15 @@ f(x)=\sum^\infty_{n=0}c_{n}(x-a)^n$$
 >is differentiable (and therefore continuous) on the interval $(a-R,a+R)$ and
 >$$
 \begin{align*}
-\text{(i)}&&f'(x)&=\sum^\infty_{n=1}nc_{n}(x-a)^{n-1}\tag{1} \\
+\text{(i)}&&f'(x)&=\sum^\infty_{n=1}nc_{n}(x-a)^{n-1}\tag{1}
+ \\
 \text{(ii)}&&\int f(x) \, dx&=C+\sum^\infty_{n=0} c_{n}\frac{(x-a)^{n+1}}{n+1} \tag{2}
 \end{align*}$$
 
 ## Taylor Series
 Taylor series is a power series used to represent a function.
 Assume we have $f(x)=\sum\limits^\infty_{n=0}c_{n}(x-a)^n$.
-Then according to Equation (1), we should have
+Then according to Equation (1), we should have 
 $$
 f'(x)=\sum^\infty_{n=1} nc_{n}(x-a)^{n-1}
 $$
