@@ -13,6 +13,8 @@ The wiki includes knowledge from these subjects:
 	2. [Software Engineering](wikipages/Software%20Engineering.md)
 - Mathematics
 	1. [Calculus](wikipages/Calculus.md)
+	2. [[wikipages/Linear Algebra|Linear Algebra]]
+	3. [[wikipages/Differential Equations|Differential Equations]]
 - Electrical Engineering
 - Social Science
 	1. [[wikipages/Economics|Economics]]

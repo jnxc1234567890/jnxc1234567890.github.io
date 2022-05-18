@@ -3,9 +3,9 @@ title: "Calculus"
 ---
 
 ## Courses
-1. [[MATH231 MOC|MATH231]]
-2. MATH241
-3. MATH286
+1. [[MATH221]]
+2. [[MATH231 MOC|MATH231]]
+3. MATH241
 
 ## Books
 1. [[Calculus - James Stewart|Calculus - James Stewart]]
