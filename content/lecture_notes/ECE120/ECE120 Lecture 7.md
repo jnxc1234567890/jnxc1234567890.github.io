@@ -50,7 +50,7 @@ It's really no kidding. Programmers often make small mistakes in programming and
 
 
 ## Floating Points are Tricky!
-As we have shown [[Lectures/ECE120/Lecture 4#Danger in floating point numbers|before]], floating point numbers are tricky to handle.
+As we have shown [[lecture_notes/ECE120/ECE120 Lecture 4#Danger in floating point numbers|before]], floating point numbers are tricky to handle.
 Here is an example in C Programming:
 
 Suppose we wish to find $\int^{1}_{-1}{(x^{2}+2x+3)} \mathrm{d}x$ by using C Programming.
@@ -83,11 +83,9 @@ int main()
 ```
 Theoretically, as ```n``` gets larger, the result will become more accurate.
 
-![[Bin/Photos/ECE120Lec07Img1.png]]
 This is also how things develop when $\mathrm{n} < 10^{6}$. 
 
 However, when $\mathrm{n}> 10^{6}$ , things becomes wired.
-![[Bin/Photos/ECE120Lec07Img2.png]]
 
 Why? Note an important part of the code above
 ```c
