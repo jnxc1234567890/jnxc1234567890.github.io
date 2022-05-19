@@ -100,6 +100,17 @@ Thus, we have the following strategy for evaluating $\int \tan^mx\sec^nx \, dx$.
 ## Trigonometric Substitution
 If we write out the expression of $y=f(x)$ for a circle $\mathcal{C}: x^2+y^2=r^2$, we'll get $y=\sqrt{ r^2-x^2 }$, this reveals the connection between $\sqrt{ r^2-x^2 }$ and trigonometric functions.
 
+If we substitute $x$ with $r\sin\theta$, $\sqrt{ r^2-x^2 }=r \cos\theta$, $dx=r\cos\theta d\theta$. The integral $\int \sqrt{ r^2-x^2 } \, dx$ becomes
+$$
+\int r\cos\theta \, d(r\sin\theta)=\int r^2\cos^2\theta \, d\theta
+$$
 
+This technique is extremely important in solving radical integrals. And we can conclude a more general case:
+
+>**Strategy**:
+>1. $\sqrt{ a^2-x^2 }$: $x=a\sin\theta$
+>2. $\sqrt{ a^2+x^2 }$: $x=a\tan\theta$
+>3. $\sqrt{ x^2-a^2 }$: $x=a\sec\theta$
 
 ## Partial Fraction
+Partial fraction is derived
