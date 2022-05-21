@@ -11,6 +11,7 @@ The wiki includes knowledge from these subjects:
 - Computer Science
 	1. [Computer Architecture](wikipages/Computer%20Architecture.md)
 	2. [Software Engineering](wikipages/Software%20Engineering.md)
+	3. [[Artificial Intelligence]]
 - Mathematics
 	1. [Calculus](wikipages/Calculus.md)
 	2. [[wikipages/Linear Algebra|Linear Algebra]]
