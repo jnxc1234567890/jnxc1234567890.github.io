@@ -5,3 +5,5 @@ title: "AI Bias"
 ### Data
 ### People
 ### Algorithm
+
+## Solutions to AI Bias
