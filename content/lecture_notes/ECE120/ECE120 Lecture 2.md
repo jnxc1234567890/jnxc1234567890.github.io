@@ -82,4 +82,9 @@ It's easy to find that the appropriate $P_{k}$ should be $2^{N}-k$.
 The representation of $P_{k}=2^{N}-k$ is called **2' complement** representation. It has the advantage of using the same addition circuit with unsigned representation.
 
 ## Sign-Magnitude (optional)
-Sign-Magnitude representation is used 
+Sign-Magnitude representation is used in some very old machines like POWER PC.
+The format is as follows:
+```
+| sign | (N-1)-bit magnitude |
+|  0   |    0000001100011    |
+```
