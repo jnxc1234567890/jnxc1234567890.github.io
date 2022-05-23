@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 7"
+title: "ECE120 Lecture 7 - Program Analysis and Testing"
 ---
 ## Program Analysis
 Being able to read code is a necessary skill.

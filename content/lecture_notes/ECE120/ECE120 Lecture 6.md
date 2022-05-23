@@ -1,3 +1,3 @@
 ---
-title: "ECE120 Lecture 6"
+title: "ECE120 Lecture 6 - Basic I/O"
 ---

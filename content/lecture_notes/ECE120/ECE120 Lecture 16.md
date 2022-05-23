@@ -17,6 +17,7 @@ The diagram is as follows:
 ![[lecture_notes/ECE120/images/Pasted image 20220505001852.png]]
 
 The behavior of an R'-S' latch:
+
 | $\overline{R}$ | $\overline{S}$ | Effect           |
 | -------------- | -------------- | ---------------- |
 | 1              | 1              | Keep current bit |

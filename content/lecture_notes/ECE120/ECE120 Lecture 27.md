@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 27 - Instruction formats and instruction processing"
+title: "ECE120 Lecture 27 - Instruction Formats and Instruction Processing"
 ---
 ## Instruction Formats
 

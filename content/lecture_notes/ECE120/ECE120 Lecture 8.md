@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 8"
+title: "ECE120 Lecture 8 - CMOS Logic and Optimization"
 ---
 
 ## MOSFET

@@ -1,5 +1,5 @@
 ---
-title: "ECE120 Lecture 14"
+title: "ECE120 Lecture 14 - Abstraction in Design"
 ---
 
 ## Power of Two Checker
